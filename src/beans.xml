@@ -1,0 +1,7 @@
+<beans>
+	<bean id="u" class="com.peach.dao.impl.UserDAOImpl" />
+	<bean id="userService" class="com.peach.service.UserService" >
+		<property name="userDAO" bean="u"/>
+	</bean>
+	
+</beans>
