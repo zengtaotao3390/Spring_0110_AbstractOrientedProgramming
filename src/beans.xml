@@ -4,7 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-    <bean id="userService" class="com.peach.service.UserService">
+
+    <!--bean scopes singleton prototype  -->
+    <bean id="userService" class="com.peach.service.UserService" scope="prototype">
         <property name="userDAO" ref="u"/>
     </bean>
     <bean id="u" class="com.peach.dao.impl.UserDAOImpl"/>
