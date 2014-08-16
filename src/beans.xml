@@ -5,9 +5,58 @@
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 
-    <!--bean scopes singleton prototype  -->
-    <bean id="userService" class="com.peach.service.UserService" scope="prototype">
+    <!--bean scopes singleton prototype
+    <bean id="userService" class="com.peach.service.UserService" scope="prototype">-->
+
+    <bean id="userService" class="com.peach.service.UserService">
         <property name="userDAO" ref="u"/>
+        <property name="someList">
+            <list>
+                <value>1</value>
+                <value>2</value>
+            </list>
+        </property>
+        <property name="someMap">
+            <map>
+                <entry>
+                    <key>
+                        <value>1</value>
+                    </key>
+                    <value>1</value>
+
+                </entry>
+                <entry>
+                    <key>
+                        <value>2</value>
+                    </key>
+                    <value>1</value>
+
+                </entry>
+                <entry>
+                    <key>
+                        <value>3</value>
+                    </key>
+                    <value>1</value>
+
+                </entry>
+            </map>
+
+        </property>
+        <property name="someSet">
+            <set>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+                <value>4</value>
+                <value>5</value>
+
+
+            </set>
+
+
+        </property>
+
+
     </bean>
     <bean id="u" class="com.peach.dao.impl.UserDAOImpl"/>
 

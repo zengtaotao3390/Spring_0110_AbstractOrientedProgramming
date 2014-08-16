@@ -14,8 +14,7 @@ public class UserServiceTest {
     public void testAdd() throws Exception {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
         UserService service = (UserService) applicationContext.getBean("userService");
-        UserService service1 = (UserService) applicationContext.getBean("userService");
-        System.out.println(service == service1);
+        System.out.println(service);
         User u = new User();
         service.add(u);
     }
