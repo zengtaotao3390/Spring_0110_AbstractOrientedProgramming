@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="spring2.5.6">
+    <CLASSES>
+      <root url="jar://G:/大三下/视频学习/马士兵ssh/spring/尚学堂马士兵_Spring_00_项目源码/soft/spring-framework-2.5.6-with-dependencies/spring-framework-2.5.6/dist/spring.jar!/" />
+      <root url="jar://G:/大三下/视频学习/马士兵ssh/spring/尚学堂马士兵_Spring_00_项目源码/soft/spring-framework-2.5.6-with-dependencies/spring-framework-2.5.6/lib/jakarta-commons/commons-logging.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

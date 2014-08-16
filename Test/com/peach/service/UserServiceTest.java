@@ -1,18 +1,19 @@
 package com.peach.service;
 
-import com.peach.dao.UserDAO;
 import com.peach.model.User;
-import com.peach.spring.BeanFactory;
 import org.junit.Test;
-import com.peach.spring.*;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 /**
  * Created by y400 on 2014/8/3.
  */
 public class UserServiceTest {
     @Test
     public void testAdd() throws Exception {
-        BeanFactory factory = new ClassPathXmlApplicationContext();
-        UserService service = (UserService) factory.getBean("userService");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        UserService service = (UserService) applicationContext.getBean("userService");
         //UserDAO userDAO = (UserDAO)factory.getBean("u");
         //service.setUserDAO(userDAO);
         User u = new User();
