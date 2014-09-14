@@ -5,22 +5,14 @@
            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 
-    <!--bean scopes singleton prototype
-    <bean id="userService" class="com.peach.service.UserService" scope="prototype">-->
 
-    <bean id="userService" class="com.peach.service.UserService" scope="prototype" autowire="byType">
-        <!--<property name="userDAO" ref="userDAO1"/>-->
 
-    </bean>
-<!--
-    <bean id="userDAO" class="com.peach.dao.impl.UserDAOImpl">
-        <property name="userId" value ="1"></property>
-    </bean>-->
+    <bean id="userService" class="com.peach.service.UserService" init-method="init" destroy-method="destroy" scope="prototype">
 
-    <bean id="userDAO2" class="com.peach.dao.impl.UserDAOImpl">
-        <property name="userId" value="2"></property>
 
     </bean>
+
+
 
 
 </beans>

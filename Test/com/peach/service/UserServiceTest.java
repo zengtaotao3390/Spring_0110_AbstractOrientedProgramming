@@ -14,8 +14,12 @@ public class UserServiceTest {
     @Test
     public void testAdd() throws Exception {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         UserService service = (UserService) applicationContext.getBean("userService");
-        System.out.println(service.getUserDAO());
+        //if scope=prototype then not ues destory
+        UserService service1 = (UserService) applicationContext.getBean("userService");
+        //web 环境destroy会自动调用
+        context.destroy();
     }
 
 }
