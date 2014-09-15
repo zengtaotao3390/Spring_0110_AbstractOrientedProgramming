@@ -5,7 +5,7 @@ import com.peach.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * 
+ *
  * Created by y400 on 2014/7/31.
  */
 public class UserService {
