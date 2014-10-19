@@ -26,6 +26,7 @@ public class UserServiceTest {
         //service.add(new User());
 
         UserDAO u =  new UserDAOImpl();
+        //这个代理用那个handler进行处理
         PerformanceHandler handler = new PerformanceHandler(u);
         UserDAO proxy = (UserDAO) Proxy.newProxyInstance(u.getClass().getClassLoader(),
                 u.getClass().getInterfaces(), handler);
