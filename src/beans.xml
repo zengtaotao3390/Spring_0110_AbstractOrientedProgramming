@@ -13,5 +13,14 @@
     <context:annotation-config/>
     <context:component-scan base-package="com.peach"/>
     <aop:aspectj-autoproxy />
+    <bean id="LogIntercepter" class="com.peach.aop.LogInterceptor"></bean>
+    <aop:config>
+        <aop:pointcut id="servicePointcut" expression="execution(public * com.peach.service..*.*(..))"></aop:pointcut>
+    </aop:config>
+    <aop:config>
+        <aop:aspect id="logAspect" ref="LogIntercepter">
+            <aop:before method="mothodStrat" pointcut-ref="servicePointcut"></aop:before>
+        </aop:aspect>
 
+    </aop:config>
 </beans>

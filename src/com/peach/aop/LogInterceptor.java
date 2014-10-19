@@ -10,18 +10,18 @@ import java.util.Date;
 /**
  * Created by y400 on 2014/10/19.
  */
-@Aspect
+//@Aspect
 @Component
 public class LogInterceptor {
 
    // @Before("execution(public void com.peach.dao.impl.UserDAOImpl.save(com.peach.model.User))")
 
 
-    @Pointcut("execution(public * com.peach.service..*.*(..))")
+    //@Pointcut("execution(public * com.peach.service..*.*(..))")
     public void myMethod(){}
 
 
-    @Before("myMethod()")
+   // @Before("myMethod()")
     public void mothodStrat(){
         System.out.println("mothod start    now time is " + new Date());
     }
